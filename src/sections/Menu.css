@@ -1,0 +1,85 @@
+.menu {
+  background: var(--linen);
+}
+
+.menu__head {
+  text-align: center;
+}
+
+.menu__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0 3rem;
+}
+
+.menu__tabs button {
+  font: inherit;
+  font-weight: 500;
+  padding: 0.55rem 1.4rem;
+  border-radius: 40px;
+  border: 1px solid #d9ceb8;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu__tabs button.is-active {
+  background: var(--olive);
+  border-color: var(--olive);
+  color: var(--white);
+}
+
+.menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+.menu__list li {
+  margin-bottom: 1.8rem;
+}
+
+.menu__line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+}
+
+.menu__line h3 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.menu__dots {
+  flex: 1;
+  border-bottom: 2px dotted #c9bda4;
+}
+
+.menu__price {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  color: var(--terracotta);
+}
+
+.menu__list p {
+  color: var(--muted);
+  margin: 0.2rem 0 0;
+}
+
+.menu__tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  background: var(--olive);
+  color: var(--white);
+}
+
+.menu__legend {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 2rem;
+}
