@@ -8,11 +8,17 @@ const times = ['12:00', '12:30', '13:00', '13:30', '19:00', '19:30', '20:00', '2
 // set VITE_FORM_ENDPOINT (Formspree, Getform...) to receive requests by email
 const endpoint = import.meta.env.VITE_FORM_ENDPOINT
 
+function todayValue() {
+  const d = new Date()
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+}
+
 function validate(form) {
   const errors = {}
   if (!form.name.trim()) errors.name = 'Your name is required'
   if (!/^\S+@\S+\.\S+$/.test(form.email)) errors.email = 'Enter a valid email'
   if (!form.date) errors.date = 'Choose a date'
+  else if (form.date < todayValue()) errors.date = 'This date is in the past'
   return errors
 }
 
@@ -89,7 +95,7 @@ export default function Reservation() {
             <div className="field-row field-row--3">
               <div className="field">
                 <label htmlFor="date">Date</label>
-                <input id="date" name="date" type="date" value={form.date} onChange={update} />
+                <input id="date" name="date" type="date" min={todayValue()} value={form.date} onChange={update} />
                 {errors.date && <small>{errors.date}</small>}
               </div>
               <div className="field">
