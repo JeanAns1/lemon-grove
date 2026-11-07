@@ -1,0 +1,41 @@
+.specials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.special {
+  text-align: center;
+}
+
+.special__plate {
+  width: 80%;
+  margin: 0 auto 1.5rem;
+  transition: transform 0.4s;
+}
+
+.special:hover .special__plate {
+  transform: rotate(12deg);
+}
+
+.special h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.3rem;
+}
+
+.special p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.special strong {
+  color: var(--terracotta);
+}
+
+@media (max-width: 900px) {
+  .specials {
+    grid-template-columns: 1fr 1fr;
+  }
+}
