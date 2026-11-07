@@ -24,6 +24,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: var(--nav-height);
+}
+
 body {
   margin: 0;
   font-family: var(--sans);
