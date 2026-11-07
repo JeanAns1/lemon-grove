@@ -1,0 +1,29 @@
+.footer {
+  background: var(--ink);
+  color: #b9b4a6;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer__logo {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  color: var(--cream);
+}
+
+.footer__social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer__social a:hover {
+  color: var(--lemon);
+}

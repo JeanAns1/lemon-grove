@@ -1,3 +1,12 @@
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+
 export default function App() {
-  return <h1>Lemon Grove</h1>
+  return (
+    <>
+      <Navbar />
+      <main id="top" />
+      <Footer />
+    </>
+  )
 }
